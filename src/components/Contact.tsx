@@ -20,7 +20,7 @@ export default function Contact() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-mono text-sm font-medium text-base transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-mono text-sm font-medium text-[#0A0912] transition-transform hover:-translate-y-0.5"
             >
               <Mail size={16} /> {profile.email}
             </a>

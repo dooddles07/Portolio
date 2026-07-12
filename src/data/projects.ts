@@ -6,6 +6,7 @@ export type Project = {
   liveUrl?: string
   repoUrl?: string
   featured?: boolean
+  academic?: boolean
 }
 
 /**
@@ -29,6 +30,7 @@ export const projects: Project[] = [
     description:
       'Emergency response and live location-tracking system that computes shortest-path routing with Dijkstra’s Algorithm to connect responders with incidents faster.',
     tech: ['Full Stack', 'Dijkstra’s Algorithm', 'Real-Time Tracking'],
+    academic: true,
   },
   {
     name: 'NagaMed',
@@ -36,6 +38,7 @@ export const projects: Project[] = [
     description:
       'Healthcare booking platform that helps residents find and book nearby clinics, built with a data-analytics-driven approach to usage and scheduling patterns.',
     tech: ['Mobile', 'Data Analysis', 'Booking Systems'],
+    academic: true,
   },
   {
     name: 'CYA FaithWear',
@@ -43,5 +46,6 @@ export const projects: Project[] = [
     description:
       'Full-stack e-commerce platform offering faith-inspired apparel and products for the campus community, from catalog to checkout.',
     tech: ['Full Stack', 'E-Commerce'],
+    academic: true,
   },
 ]

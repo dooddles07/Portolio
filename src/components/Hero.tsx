@@ -11,14 +11,23 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 pb-24 pt-16 md:grid-cols-[1.1fr_0.9fr] md:pb-32 md:pt-24">
         <div>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="eyebrow mb-5"
+            className="mb-5 flex flex-wrap items-center gap-3"
           >
-            {profile.location}
-          </motion.p>
+            {profile.openToWork && (
+              <span className="inline-flex items-center gap-2 rounded-full border border-flow/40 bg-flow/10 px-3 py-1 font-mono text-xs uppercase tracking-[0.15em] text-flow">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-flow opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-flow" />
+                </span>
+                Open to Work
+              </span>
+            )}
+            <span className="eyebrow">{profile.location}</span>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
@@ -47,7 +56,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-mono text-sm font-medium text-base transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-mono text-sm font-medium text-[#0A0912] transition-transform hover:-translate-y-0.5"
             >
               View Work <ArrowUpRight size={16} />
             </a>
@@ -59,6 +68,22 @@ export default function Hero() {
               <Download size={16} /> Download CV
             </a>
           </motion.div>
+
+          <motion.dl
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 grid max-w-lg grid-cols-2 gap-x-6 gap-y-6 border-t border-line pt-8 sm:grid-cols-4"
+          >
+            {profile.stats.map((s) => (
+              <div key={s.label}>
+                <dt className="font-display text-xl font-semibold text-ink">{s.value}</dt>
+                <dd className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+                  {s.label}
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
         </div>
 
         <div className="flex items-center">

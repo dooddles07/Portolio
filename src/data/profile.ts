@@ -14,6 +14,30 @@ export const profile = {
   ],
   location: 'Naga City, Camarines Sur, Philippines',
   email: 'brixdodd07@gmail.com',
+  openToWork: true,
+  stats: [
+    { value: '4+', label: 'Projects Shipped' },
+    { value: '5+', label: 'API Integrations' },
+    { value: 'Cum Laude', label: 'BS Computer Science' },
+    { value: 'Remote', label: 'Available Worldwide' },
+  ],
+  specialties: [
+    {
+      icon: 'workflow',
+      title: 'AI Automation & CRM',
+      body: 'GoHighLevel builds, CRM pipelines, and LLM-driven workflows (Claude Code, MCP) that replace manual busywork with systems that run on their own.',
+    },
+    {
+      icon: 'layers',
+      title: 'Full-Stack Development',
+      body: 'End-to-end web and mobile apps on the MERN stack and Laravel — clean MVC architecture, REST APIs, and databases built to scale.',
+    },
+    {
+      icon: 'plug',
+      title: 'Integrations & Security',
+      body: 'Live third-party integrations — Stripe, ElevenLabs, WhatsApp, Meta, GHL — wired securely with auth, JWT, and OWASP-aware API design.',
+    },
+  ],
   bio: [
     "I build the systems that run behind the scenes — automation pipelines, CRM workflows, and integrations that turn manual busywork into something that just runs.",
     "My work spans GoHighLevel automation and CRM architecture, full-stack development on the MERN stack, and shipping production tools with AI-assisted engineering (Claude Code, LLM-driven workflows, MCP). I've shipped live third-party integrations — Stripe payments, ElevenLabs voice, WhatsApp Business, Meta, and GHL — connecting real systems, not just prototypes. I care about systems that are reliable under real usage, not just demos — clean data flow, solid API contracts, and QA discipline baked in from the start.",
