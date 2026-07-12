@@ -88,6 +88,10 @@ export const skillGroups = [
     items: ['Node.js', 'Express.js', 'Laravel', 'API Integration', 'REST APIs'],
   },
   {
+    label: 'Architecture',
+    items: ['MVC Pattern', 'RESTful API Design', 'Laravel MVC', 'Express.js MVC', 'Modular Code Structure'],
+  },
+  {
     label: 'Data & Storage',
     items: ['MongoDB', 'PostgreSQL', 'SQL'],
   },
