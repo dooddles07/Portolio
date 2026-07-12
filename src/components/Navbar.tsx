@@ -28,8 +28,8 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-display text-lg font-semibold tracking-tight text-ink">
-          BR<span className="text-signal">.</span>
+        <a href="#top" aria-label="Brixsonn Romero — home" className="shrink-0">
+          <img src="/quantum.png" alt="Quantum" className="h-6 w-auto sm:h-7" />
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
