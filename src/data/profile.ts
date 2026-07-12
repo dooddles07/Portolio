@@ -9,6 +9,7 @@ export const profile = {
     'Systems Integration',
     'Full Stack Developer',
     'API Integration',
+    'Application Security',
     'QA Tester',
   ],
   location: 'Naga City, Camarines Sur, Philippines',
@@ -62,6 +63,17 @@ export const skillGroups = [
   {
     label: 'Integrations',
     items: ['Stripe', 'ElevenLabs', 'WhatsApp Business API', 'Meta (FB/IG) API', 'GHL API'],
+  },
+  {
+    label: 'Security',
+    items: [
+      'Auth & JWT',
+      'API Security',
+      'OWASP Top 10',
+      'Secrets Management',
+      'Input Validation',
+      'Secure Payments (Stripe)',
+    ],
   },
   {
     label: 'Languages',

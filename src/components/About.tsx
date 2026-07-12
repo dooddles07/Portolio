@@ -20,11 +20,11 @@ export default function About() {
           ))}
 
           <Reveal delay={0.3}>
-            <div className="mt-8 overflow-hidden rounded-2xl border border-line">
+            <div className="mt-8 aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-line">
               <img
                 src={profile.avatarUrl}
                 alt={profile.name}
-                className="h-72 w-full object-cover object-top sm:h-96"
+                className="h-full w-full object-cover object-[center_20%]"
               />
             </div>
           </Reveal>
