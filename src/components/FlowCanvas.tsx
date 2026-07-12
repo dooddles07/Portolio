@@ -3,7 +3,7 @@ import { profile } from '../data/profile'
 
 /**
  * Signature hero element: a vertical signal spine with his actual role
- * titles as nodes — a literal read of "automation pipeline engineer",
+ * titles as nodes, a literal read of "automation pipeline engineer",
  * not a decorative graphic.
  */
 export default function FlowCanvas() {

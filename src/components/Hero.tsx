@@ -9,7 +9,7 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[calc(100svh-64px)] items-center overflow-hidden bg-grid bg-[size:44px_44px]"
     >
-      {/* Funnel glows — wide at top, converging toward the CTA below */}
+      {/* Funnel glows: wide at top, converging toward the CTA below */}
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-signal/20 blur-[140px]" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-flow/10 blur-[120px]" />
 
@@ -61,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
           >
-            AI automation, CRM workflows, and full-stack systems — built with GHL, MERN, and live
+            AI automation, CRM workflows, and full-stack systems, built with GHL, MERN, and live
             integrations (Stripe, ElevenLabs, WhatsApp, Meta), then secured and tested so they keep
             running.
           </motion.p>
@@ -109,7 +109,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll cue — funnels the eye into the rest of the page */}
+      {/* Scroll cue: funnels the eye into the rest of the page */}
       <a
         href="#about"
         aria-label="Scroll to about"

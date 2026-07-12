@@ -30,17 +30,17 @@ export const profile = {
     {
       icon: 'layers',
       title: 'Full-Stack Development',
-      body: 'End-to-end web and mobile apps on the MERN stack and Laravel — clean MVC architecture, REST APIs, and databases built to scale.',
+      body: 'End-to-end web and mobile apps on the MERN stack and Laravel, with clean MVC architecture, REST APIs, and databases built to scale.',
     },
     {
       icon: 'plug',
       title: 'Integrations & Security',
-      body: 'Live third-party integrations — Stripe, ElevenLabs, WhatsApp, Meta, GHL — wired securely with auth, JWT, and OWASP-aware API design.',
+      body: 'Live third-party integrations (Stripe, ElevenLabs, WhatsApp, Meta, GHL), wired securely with auth, JWT, and OWASP-aware API design.',
     },
   ],
   bio: [
-    "I build the systems that run behind the scenes — automation pipelines, CRM workflows, and integrations that turn manual busywork into something that just runs.",
-    "My work spans GoHighLevel automation and CRM architecture, full-stack development on the MERN stack, and shipping production tools with AI-assisted engineering (Claude Code, LLM-driven workflows, MCP). I've shipped live third-party integrations — Stripe payments, ElevenLabs voice, WhatsApp Business, Meta, and GHL — connecting real systems, not just prototypes. I care about systems that are reliable under real usage, not just demos — clean data flow, solid API contracts, and QA discipline baked in from the start.",
+    "I build the systems that run behind the scenes: automation pipelines, CRM workflows, and integrations that turn manual busywork into something that just runs.",
+    "My work spans GoHighLevel automation and CRM architecture, full-stack development on the MERN stack, and shipping production tools with AI-assisted engineering (Claude Code, LLM-driven workflows, MCP). I've shipped live third-party integrations (Stripe payments, ElevenLabs voice, WhatsApp Business, Meta, and GHL) connecting real systems, not just prototypes. I care about systems that are reliable under real usage, not just demos: clean data flow, solid API contracts, and QA discipline baked in from the start.",
     "Computer Science graduate (cum laude), Naga College Foundation. Based in the Philippines, working with teams anywhere.",
   ],
   resumeUrl: '/resume.pdf',
@@ -50,19 +50,19 @@ export const profile = {
       degree: 'Bachelor of Science in Computer Science',
       distinction: 'Cum Laude',
       school: 'Naga College Foundation, Inc.',
-      period: '2022 — 2026',
+      period: '2022 – 2026',
     },
   ],
   honors: [
-    "Dean's Lister — Naga College Foundation, Inc. (2022–2026)",
-    'Idea2Startup Bootcamp — Participant (2023)',
-    'CCS Start-Up Bootcamp with LGU — Participant (2024)',
+    "Dean's Lister, Naga College Foundation, Inc. (2022–2026)",
+    'Idea2Startup Bootcamp, Participant (2023)',
+    'CCS Start-Up Bootcamp with LGU, Participant (2024)',
   ],
   experience: [
     {
-      org: 'Department of Social Welfare and Development — Camarines Sur',
+      org: 'Department of Social Welfare and Development, Camarines Sur',
       role: 'Data Encoder',
-      period: '2022 — 2025',
+      period: '2022 – 2025',
       detail:
         'Encoded, organized, and maintained accurate beneficiary and program data to support efficient delivery of social welfare services.',
     },
