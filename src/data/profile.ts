@@ -30,17 +30,17 @@ export const profile = {
     {
       icon: 'layers',
       title: 'Full-Stack Development',
-      body: 'End-to-end web and mobile apps on the MERN stack and Laravel, with clean MVC architecture, REST APIs, and databases built to scale.',
+      body: 'End-to-end web and mobile apps, from requirements to live deployment, with clean architecture, reliable APIs, and databases built to scale.',
     },
     {
       icon: 'plug',
       title: 'Integrations & Security',
-      body: 'Live third-party integrations (Stripe, ElevenLabs, WhatsApp, Meta, GHL), wired securely with auth, JWT, and OWASP-aware API design.',
+      body: 'Live third-party integrations (Stripe, ElevenLabs, WhatsApp, Meta, GHL), wired securely with protected access, validated inputs, and safe handling of sensitive data.',
     },
   ],
   bio: [
     "I build the systems that run behind the scenes: automation pipelines, CRM workflows, and integrations that turn manual busywork into something that just runs.",
-    "My work spans GoHighLevel automation and CRM architecture, full-stack development on the MERN stack, and shipping production tools with AI-assisted engineering (Claude Code, LLM-driven workflows, MCP). I've shipped live third-party integrations (Stripe payments, ElevenLabs voice, WhatsApp Business, Meta, and GHL) connecting real systems, not just prototypes. I care about systems that are reliable under real usage, not just demos: clean data flow, solid API contracts, and QA discipline baked in from the start.",
+    "My work spans GoHighLevel automation and CRM architecture, end-to-end web and mobile development, and shipping production tools with AI-assisted engineering (Claude Code, LLM-driven workflows, MCP). I've shipped live third-party integrations (Stripe payments, ElevenLabs voice, WhatsApp Business, Meta, and GHL) connecting real systems, not just prototypes. I care about systems that are reliable under real usage, not just demos: clean data flow, dependable performance, and QA discipline baked in from the start.",
     "Computer Science graduate (cum laude), Naga College Foundation. Based in the Philippines, working with teams anywhere.",
   ],
   resumeUrl: '/resume.pdf',
