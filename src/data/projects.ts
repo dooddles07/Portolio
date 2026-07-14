@@ -21,7 +21,7 @@ export const projects: Project[] = [
       'Full property operations system covering unit booking, guest QR check-in, parcel logging, and move-in/move-out workflows, with real Stripe-powered deposit payments across three distinct role dashboards.',
     tech: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Stripe', 'Vanilla JS'],
     liveUrl: 'https://the-lumina-production.up.railway.app/',
-    repoUrl: 'https://github.com/dooddles07/The-Meridian',
+    repoUrl: 'https://github.com/dooddles07/The-Lumina',
     featured: true,
   },
   {
