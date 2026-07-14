@@ -3,11 +3,10 @@ export const profile = {
   initials: 'BR',
   tagline: 'AI-Assisted Full Stack Web Developer & CRM / Workflow Automation',
   roles: [
-    'AI-Assisted Full Stack Web Developer',
+    'AI-Assisted Full Stack Web & Mobile Developer',
     'CRM & Workflow Automation',
     'Systems Integration',
     'API Integration',
-    'Full Stack Developer',
     'Application Security',
     'QA Tester',
   ],
