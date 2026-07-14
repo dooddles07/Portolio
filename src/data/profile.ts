@@ -1,14 +1,13 @@
 export const profile = {
   name: 'Brixsonn Romero',
   initials: 'BR',
-  tagline: 'AI Automation Engineer & Full Stack Developer',
+  tagline: 'AI-Assisted Full Stack Web Developer & CRM / Workflow Automation',
   roles: [
-    'AI Automation Engineer',
-    'GHL Engineer',
+    'AI-Assisted Full Stack Web Developer',
     'CRM & Workflow Automation',
     'Systems Integration',
-    'Full Stack Developer',
     'API Integration',
+    'Full Stack Developer',
     'Application Security',
     'QA Tester',
   ],
@@ -29,8 +28,8 @@ export const profile = {
     },
     {
       icon: 'layers',
-      title: 'Full-Stack Development',
-      body: 'End-to-end web and mobile apps, from requirements to live deployment, with clean architecture, reliable APIs, and databases built to scale.',
+      title: 'AI-Assisted Full-Stack Development',
+      body: 'End-to-end web and mobile apps built with AI-assisted development, from requirements to live deployment, with clean architecture, reliable APIs, and databases built to scale.',
     },
     {
       icon: 'plug',
@@ -39,7 +38,7 @@ export const profile = {
     },
   ],
   bio: [
-    "I build the systems that run behind the scenes: automation pipelines, CRM workflows, and integrations that turn manual busywork into something that just runs.",
+    "I'm an AI-assisted full stack web developer who also builds CRM and workflow automation: the systems that run behind the scenes, turning manual busywork into something that just runs.",
     "My work spans GoHighLevel automation and CRM architecture, end-to-end web and mobile development, and shipping production tools with AI-assisted engineering (Claude Code, LLM-driven workflows, MCP). I've shipped live third-party integrations (Stripe payments, ElevenLabs voice, WhatsApp Business, Meta, and GHL) connecting real systems, not just prototypes. I care about systems that are reliable under real usage, not just demos: clean data flow, dependable performance, and QA discipline baked in from the start.",
     "Computer Science graduate (cum laude), Naga College Foundation. Based in the Philippines, working with teams anywhere.",
   ],
@@ -93,7 +92,6 @@ export const skillGroups = [
     items: [
       'Auth & JWT',
       'API Security',
-      'OWASP Top 10',
       'Secrets Management',
       'Input Validation',
       'Secure Payments (Stripe)',

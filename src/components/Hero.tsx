@@ -61,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
           >
-            AI automation, CRM workflows, and full-stack systems, built with GHL, MERN, and live
+            AI-assisted full-stack web development, CRM and workflow automation, and live
             integrations (Stripe, ElevenLabs, WhatsApp, Meta), then secured and tested so they keep
             running.
           </motion.p>
