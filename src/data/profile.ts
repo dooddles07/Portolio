@@ -58,6 +58,13 @@ export const profile = {
   ],
   experience: [
     {
+      org: 'Digital Benefits Pte. Ltd.',
+      role: 'AI Automation & Full Stack Developer',
+      period: 'Feb 2026 – Jul 2026',
+      detail:
+        'Built Beeva Command Center (WhatsApp AI concierge and ops dashboard for a Singapore retailer), SRC booking platform, and The Meridian property portal, all GoHighLevel-integrated, with webhook-driven CRM pipelines, staff dashboards, and hardened application security (OAuth/JWT, input validation, rate limiting).',
+    },
+    {
       org: 'Department of Social Welfare and Development, Camarines Sur',
       role: 'Data Encoder',
       period: '2022 – 2025',
@@ -80,7 +87,16 @@ export const profile = {
 export const skillGroups = [
   {
     label: 'AI & Automation',
-    items: ['Claude Code', 'Codex', 'LLM Workflows', 'MCP', 'GoHighLevel (GHL)', 'CRM Automation'],
+    items: [
+      'Claude Code',
+      'Codex',
+      'OpenAI API',
+      'Anthropic/Claude API',
+      'MCP (Model Context Protocol)',
+      'Claude Code Plugins',
+      'GoHighLevel (GHL)',
+      'CRM Automation',
+    ],
   },
   {
     label: 'Integrations',
