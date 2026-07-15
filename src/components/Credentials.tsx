@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Briefcase } from 'lucide-react'
+import { GraduationCap, Award } from 'lucide-react'
 import { profile } from '../data/profile'
 import Reveal from './Reveal'
 
@@ -9,11 +9,11 @@ export default function Credentials() {
         <Reveal>
           <p className="eyebrow mb-4">Credentials</p>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-ink">
-            Education & experience
+            Education & honors
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           <Reveal className="rounded-2xl border border-line bg-surface p-7">
             <GraduationCap className="text-signal" size={22} />
             <h3 className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-muted">
@@ -41,21 +41,6 @@ export default function Credentials() {
                 </li>
               ))}
             </ul>
-          </Reveal>
-
-          <Reveal delay={0.16} className="rounded-2xl border border-line bg-surface p-7">
-            <Briefcase className="text-signal" size={22} />
-            <h3 className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-              Experience
-            </h3>
-            {profile.experience.map((e) => (
-              <div key={e.org} className="mt-3">
-                <p className="font-display text-base font-semibold text-ink">{e.role}</p>
-                <p className="mt-1 text-sm text-muted">{e.org}</p>
-                <p className="text-sm text-muted">{e.period}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted/80">{e.detail}</p>
-              </div>
-            ))}
           </Reveal>
         </div>
       </div>
