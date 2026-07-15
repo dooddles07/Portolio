@@ -1,3 +1,4 @@
+import { ArrowUp } from 'lucide-react'
 import { profile } from '../data/profile'
 
 export default function Footer() {
@@ -7,6 +8,12 @@ export default function Footer() {
         <p className="font-mono">
           © {new Date().getFullYear()} {profile.name}
         </p>
+        <a
+          href="#top"
+          className="inline-flex items-center gap-1.5 font-mono uppercase tracking-[0.15em] transition-colors hover:text-flow"
+        >
+          <ArrowUp size={13} /> Back to top
+        </a>
         <p className="font-mono">Built with React, Tailwind & Framer Motion</p>
       </div>
     </footer>

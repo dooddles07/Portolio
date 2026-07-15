@@ -1,5 +1,18 @@
+import { motion } from 'framer-motion'
 import { skillGroups } from '../data/profile'
 import Reveal from './Reveal'
+
+const chipList = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.03 },
+  },
+}
+
+const chip = {
+  hidden: { opacity: 0, scale: 0.92, y: 4 },
+  show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.25, ease: 'easeOut' } },
+}
 
 export default function Skills() {
   return (
@@ -18,16 +31,24 @@ export default function Skills() {
               <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-signal">
                 {group.label}
               </h3>
-              <ul className="mt-4 flex flex-wrap gap-2">
+              <motion.ul
+                variants={chipList}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: '-40px' }}
+                className="mt-4 flex flex-wrap gap-2"
+              >
                 {group.items.map((item) => (
-                  <li
+                  <motion.li
                     key={item}
-                    className="rounded-full border border-line bg-surface2 px-3 py-1 text-sm text-ink/90"
+                    variants={chip}
+                    whileHover={{ y: -2 }}
+                    className="rounded-full border border-line bg-surface2 px-3 py-1 text-sm text-ink/90 transition-colors hover:border-flow/50 hover:text-flow"
                   >
                     {item}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </Reveal>
           ))}
         </div>

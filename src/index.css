@@ -20,6 +20,69 @@
   .eyebrow {
     @apply font-mono text-xs uppercase tracking-[0.2em] text-flow;
   }
+
+  /* Living gradient for the hero's key phrase */
+  .text-gradient-animate {
+    background: linear-gradient(90deg, #9b6bff, #52e0c4, #9b6bff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientshift 7s linear infinite;
+  }
+}
+
+@keyframes gradientshift {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* Cursor-tracking sheen for cards; desktop pointers only */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(155, 107, 255, 0.12),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  pointer-events: none;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+@media (hover: none) {
+  .spotlight-card::before {
+    display: none;
+  }
+}
+
+/* Scrollbar tuned to the palette */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0912;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2650;
+  border-radius: 8px;
+  border: 2px solid #0a0912;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9b6bff;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2e2650 #0a0912;
 }
 
 @media (prefers-reduced-motion: reduce) {

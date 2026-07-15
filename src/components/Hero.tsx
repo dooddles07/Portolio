@@ -52,7 +52,7 @@ export default function Hero() {
             className="font-display text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]"
           >
             I turn manual busywork into{' '}
-            <span className="text-signal">systems that run themselves.</span>
+            <span className="text-gradient-animate">systems that run themselves.</span>
           </motion.h1>
 
           <motion.p
@@ -72,19 +72,25 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <a
+            <motion.a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-signal px-7 py-3.5 font-mono text-sm font-medium text-[#0A0912] shadow-[0_0_0_0_rgba(155,107,255,0.5)] transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_rgba(155,107,255,0.6)]"
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+              className="inline-flex items-center gap-2 rounded-full bg-signal px-7 py-3.5 font-mono text-sm font-medium text-[#0A0912] shadow-[0_0_0_0_rgba(155,107,255,0.5)] transition-shadow hover:shadow-[0_10px_30px_-8px_rgba(155,107,255,0.6)]"
             >
               See what I've shipped <ArrowUpRight size={16} />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={profile.resumeUrl}
               download
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 22 }}
               className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3.5 font-mono text-sm text-ink transition-colors hover:border-flow hover:text-flow"
             >
               <Download size={16} /> Download CV
-            </a>
+            </motion.a>
           </motion.div>
 
           <motion.dl

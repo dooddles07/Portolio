@@ -1,6 +1,7 @@
 import { ArrowUpRight, Github } from 'lucide-react'
 import type { Project } from '../data/projects'
 import Reveal from './Reveal'
+import SpotlightCard from './SpotlightCard'
 
 function Tag({ project }: { project: Project }) {
   if (project.featured)
@@ -65,7 +66,7 @@ export default function ProjectCard({ project, delay = 0 }: { project: Project; 
   if (project.featured) {
     return (
       <Reveal delay={delay} className="sm:col-span-2">
-        <article className="group relative overflow-hidden rounded-2xl border border-signal/30 bg-surface p-8 transition-colors hover:border-signal/60">
+        <SpotlightCard className="group rounded-2xl border border-signal/30 bg-surface p-8 transition-colors hover:border-signal/60">
           <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-signal/10 blur-3xl" />
           <div className="relative grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
             <div>
@@ -81,14 +82,14 @@ export default function ProjectCard({ project, delay = 0 }: { project: Project; 
               <TechList project={project} />
             </div>
           </div>
-        </article>
+        </SpotlightCard>
       </Reveal>
     )
   }
 
   return (
-    <Reveal delay={delay}>
-      <article className="group relative flex h-full flex-col rounded-2xl border border-line bg-surface p-7 transition-colors hover:border-signal/60">
+    <Reveal delay={delay} className="h-full">
+      <SpotlightCard className="group flex h-full flex-col rounded-2xl border border-line bg-surface p-7 transition-colors hover:border-signal/60">
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-display text-xl font-semibold text-ink">{project.name}</h3>
           <Tag project={project} />
@@ -99,7 +100,7 @@ export default function ProjectCard({ project, delay = 0 }: { project: Project; 
 
         <TechList project={project} />
         <Links project={project} />
-      </article>
+      </SpotlightCard>
     </Reveal>
   )
 }

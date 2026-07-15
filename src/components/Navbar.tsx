@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { Menu, X, Download } from 'lucide-react'
 import { profile } from '../data/profile'
 
@@ -15,11 +16,30 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [active, setActive] = useState('')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = links
+      .map((l) => document.getElementById(l.href.slice(1)))
+      .filter((el): el is HTMLElement => el !== null)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActive(entry.target.id)
+        }
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    )
+
+    sections.forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -34,16 +54,29 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="font-mono text-xs uppercase tracking-[0.15em] text-muted transition-colors hover:text-flow"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
+          {links.map((l) => {
+            const isActive = active === l.href.slice(1)
+            return (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  aria-current={isActive ? 'true' : undefined}
+                  className={`relative font-mono text-xs uppercase tracking-[0.15em] transition-colors hover:text-flow ${
+                    isActive ? 'text-flow' : 'text-muted'
+                  }`}
+                >
+                  {l.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                      className="absolute -bottom-1.5 left-0 right-0 h-px bg-flow"
+                    />
+                  )}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <a
@@ -72,7 +105,9 @@ export default function Navbar() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="font-mono text-sm uppercase tracking-[0.15em] text-muted hover:text-flow"
+                  className={`font-mono text-sm uppercase tracking-[0.15em] hover:text-flow ${
+                    active === l.href.slice(1) ? 'text-flow' : 'text-muted'
+                  }`}
                 >
                   {l.label}
                 </a>

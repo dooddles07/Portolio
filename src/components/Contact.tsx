@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Github, Linkedin, Facebook, Mail, ArrowUpRight, Download } from 'lucide-react'
 import { profile } from '../data/profile'
 import Reveal from './Reveal'
@@ -18,19 +19,25 @@ export default function Contact() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
+            <motion.a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-mono text-sm font-medium text-[#0A0912] transition-transform hover:-translate-y-0.5"
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+              className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-mono text-sm font-medium text-[#0A0912] shadow-[0_0_0_0_rgba(155,107,255,0.5)] transition-shadow hover:shadow-[0_10px_30px_-8px_rgba(155,107,255,0.6)]"
             >
               <Mail size={16} /> {profile.email}
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={profile.resumeUrl}
               download
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 22 }}
               className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 font-mono text-sm text-ink transition-colors hover:border-flow hover:text-flow"
             >
               <Download size={16} /> Download CV
-            </a>
+            </motion.a>
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-6">
